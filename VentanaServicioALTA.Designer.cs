@@ -38,6 +38,8 @@ namespace lab3_sanchez_pablo_sn
             this.checkBox1_premium = new System.Windows.Forms.CheckBox();
             this.button1_aceptar = new System.Windows.Forms.Button();
             this.button2_cancelar = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
+            this.textBox1_DNI_titular = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // label1
@@ -81,7 +83,7 @@ namespace lab3_sanchez_pablo_sn
             "Internet"});
             this.comboBox1_servicio.Location = new System.Drawing.Point(118, 22);
             this.comboBox1_servicio.Name = "comboBox1_servicio";
-            this.comboBox1_servicio.Size = new System.Drawing.Size(121, 21);
+            this.comboBox1_servicio.Size = new System.Drawing.Size(100, 21);
             this.comboBox1_servicio.TabIndex = 7;
             // 
             // label4
@@ -96,7 +98,7 @@ namespace lab3_sanchez_pablo_sn
             // checkBox1_premium
             // 
             this.checkBox1_premium.AutoSize = true;
-            this.checkBox1_premium.Location = new System.Drawing.Point(119, 66);
+            this.checkBox1_premium.Location = new System.Drawing.Point(12, 92);
             this.checkBox1_premium.Name = "checkBox1_premium";
             this.checkBox1_premium.Size = new System.Drawing.Size(66, 17);
             this.checkBox1_premium.TabIndex = 9;
@@ -105,7 +107,7 @@ namespace lab3_sanchez_pablo_sn
             // 
             // button1_aceptar
             // 
-            this.button1_aceptar.Location = new System.Drawing.Point(164, 105);
+            this.button1_aceptar.Location = new System.Drawing.Point(143, 115);
             this.button1_aceptar.Name = "button1_aceptar";
             this.button1_aceptar.Size = new System.Drawing.Size(75, 23);
             this.button1_aceptar.TabIndex = 10;
@@ -115,7 +117,7 @@ namespace lab3_sanchez_pablo_sn
             // 
             // button2_cancelar
             // 
-            this.button2_cancelar.Location = new System.Drawing.Point(12, 104);
+            this.button2_cancelar.Location = new System.Drawing.Point(12, 115);
             this.button2_cancelar.Name = "button2_cancelar";
             this.button2_cancelar.Size = new System.Drawing.Size(75, 23);
             this.button2_cancelar.TabIndex = 11;
@@ -123,11 +125,29 @@ namespace lab3_sanchez_pablo_sn
             this.button2_cancelar.UseVisualStyleBackColor = true;
             this.button2_cancelar.Click += new System.EventHandler(this.button2_cancelar_Click);
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(118, 50);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(71, 13);
+            this.label2.TabIndex = 12;
+            this.label2.Text = "DNI del titular";
+            // 
+            // textBox1_DNI_titular
+            // 
+            this.textBox1_DNI_titular.Location = new System.Drawing.Point(118, 66);
+            this.textBox1_DNI_titular.Name = "textBox1_DNI_titular";
+            this.textBox1_DNI_titular.Size = new System.Drawing.Size(100, 20);
+            this.textBox1_DNI_titular.TabIndex = 13;
+            // 
             // VentanaServicioALTA
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(251, 139);
+            this.ClientSize = new System.Drawing.Size(233, 153);
+            this.Controls.Add(this.textBox1_DNI_titular);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.button2_cancelar);
             this.Controls.Add(this.button1_aceptar);
             this.Controls.Add(this.checkBox1_premium);
@@ -157,5 +177,7 @@ namespace lab3_sanchez_pablo_sn
         private System.Windows.Forms.CheckBox checkBox1_premium;
         private System.Windows.Forms.Button button1_aceptar;
         private System.Windows.Forms.Button button2_cancelar;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox textBox1_DNI_titular;
     }
 }
