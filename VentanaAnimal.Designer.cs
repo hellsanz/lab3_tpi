@@ -1,7 +1,7 @@
 ﻿
 namespace lab3_sanchez_pablo_sn
 {
-    partial class VentanaPersona
+    partial class VentanaAnimal
     {
         /// <summary>
         /// Required designer variable.
@@ -42,90 +42,90 @@ namespace lab3_sanchez_pablo_sn
             // 
             // button1_ver
             // 
-            this.button1_ver.Location = new System.Drawing.Point(255, 38);
+            this.button1_ver.Location = new System.Drawing.Point(255, 33);
             this.button1_ver.Name = "button1_ver";
             this.button1_ver.Size = new System.Drawing.Size(56, 23);
-            this.button1_ver.TabIndex = 17;
+            this.button1_ver.TabIndex = 26;
             this.button1_ver.Text = "ver";
             this.button1_ver.UseVisualStyleBackColor = true;
             // 
             // button1_buscar
             // 
-            this.button1_buscar.Location = new System.Drawing.Point(255, 12);
+            this.button1_buscar.Location = new System.Drawing.Point(255, 7);
             this.button1_buscar.Name = "button1_buscar";
             this.button1_buscar.Size = new System.Drawing.Size(56, 20);
-            this.button1_buscar.TabIndex = 16;
+            this.button1_buscar.TabIndex = 25;
             this.button1_buscar.Text = "Buscar";
             this.button1_buscar.UseVisualStyleBackColor = true;
             // 
             // listView1
             // 
             this.listView1.HideSelection = false;
-            this.listView1.Location = new System.Drawing.Point(12, 67);
+            this.listView1.Location = new System.Drawing.Point(12, 62);
             this.listView1.Name = "listView1";
             this.listView1.Size = new System.Drawing.Size(299, 174);
-            this.listView1.TabIndex = 15;
+            this.listView1.TabIndex = 24;
             this.listView1.UseCompatibleStateImageBehavior = false;
             // 
             // button1_cancelar
             // 
-            this.button1_cancelar.Location = new System.Drawing.Point(236, 247);
+            this.button1_cancelar.Location = new System.Drawing.Point(236, 242);
             this.button1_cancelar.Name = "button1_cancelar";
             this.button1_cancelar.Size = new System.Drawing.Size(75, 23);
-            this.button1_cancelar.TabIndex = 14;
+            this.button1_cancelar.TabIndex = 23;
             this.button1_cancelar.Text = "Cancelar";
             this.button1_cancelar.UseVisualStyleBackColor = true;
             this.button1_cancelar.Click += new System.EventHandler(this.button1_cancelar_Click);
             // 
             // button1_modificacion
             // 
-            this.button1_modificacion.Location = new System.Drawing.Point(174, 38);
+            this.button1_modificacion.Location = new System.Drawing.Point(174, 33);
             this.button1_modificacion.Name = "button1_modificacion";
             this.button1_modificacion.Size = new System.Drawing.Size(75, 23);
-            this.button1_modificacion.TabIndex = 13;
+            this.button1_modificacion.TabIndex = 22;
             this.button1_modificacion.Text = "Modificacion";
             this.button1_modificacion.UseVisualStyleBackColor = true;
             // 
             // button1_baja
             // 
-            this.button1_baja.Location = new System.Drawing.Point(93, 38);
+            this.button1_baja.Location = new System.Drawing.Point(93, 33);
             this.button1_baja.Name = "button1_baja";
             this.button1_baja.Size = new System.Drawing.Size(75, 23);
-            this.button1_baja.TabIndex = 12;
+            this.button1_baja.TabIndex = 21;
             this.button1_baja.Text = "Baja";
             this.button1_baja.UseVisualStyleBackColor = true;
             // 
             // button1_alta
             // 
-            this.button1_alta.Location = new System.Drawing.Point(12, 38);
+            this.button1_alta.Location = new System.Drawing.Point(12, 33);
             this.button1_alta.Name = "button1_alta";
             this.button1_alta.Size = new System.Drawing.Size(75, 23);
-            this.button1_alta.TabIndex = 11;
+            this.button1_alta.TabIndex = 20;
             this.button1_alta.Text = "Alta";
             this.button1_alta.UseVisualStyleBackColor = true;
             this.button1_alta.Click += new System.EventHandler(this.button1_alta_Click);
             // 
             // textBox1_nombre
             // 
-            this.textBox1_nombre.Location = new System.Drawing.Point(59, 12);
+            this.textBox1_nombre.Location = new System.Drawing.Point(59, 7);
             this.textBox1_nombre.Name = "textBox1_nombre";
             this.textBox1_nombre.Size = new System.Drawing.Size(190, 20);
-            this.textBox1_nombre.TabIndex = 10;
+            this.textBox1_nombre.TabIndex = 19;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(9, 15);
+            this.label1.Location = new System.Drawing.Point(9, 10);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(44, 13);
-            this.label1.TabIndex = 9;
+            this.label1.TabIndex = 18;
             this.label1.Text = "Nombre";
             // 
-            // VentanaPersona
+            // VentanaAnimal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(328, 280);
+            this.ClientSize = new System.Drawing.Size(327, 274);
             this.Controls.Add(this.button1_ver);
             this.Controls.Add(this.button1_buscar);
             this.Controls.Add(this.listView1);
@@ -136,9 +136,9 @@ namespace lab3_sanchez_pablo_sn
             this.Controls.Add(this.textBox1_nombre);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
-            this.Name = "VentanaPersona";
+            this.Name = "VentanaAnimal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "VentanaPersona";
+            this.Text = "VentanaAnimal";
             this.ResumeLayout(false);
             this.PerformLayout();
 

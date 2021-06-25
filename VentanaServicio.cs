@@ -20,7 +20,7 @@ namespace lab3_sanchez_pablo_sn
         private void button1_alta_Click(object sender, EventArgs e)
         {
             VentanaServicioALTA darAlta = new VentanaServicioALTA();
-            darAlta.Show();
+            darAlta.ShowDialog();
         }
 
         private void button1_cancelar_Click(object sender, EventArgs e)

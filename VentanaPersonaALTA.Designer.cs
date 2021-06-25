@@ -49,22 +49,22 @@ namespace lab3_sanchez_pablo_sn
             // 
             this.textBox1_nombre.Location = new System.Drawing.Point(12, 28);
             this.textBox1_nombre.Name = "textBox1_nombre";
-            this.textBox1_nombre.Size = new System.Drawing.Size(156, 20);
+            this.textBox1_nombre.Size = new System.Drawing.Size(108, 20);
             this.textBox1_nombre.TabIndex = 0;
             // 
             // textBox2_apellido
             // 
-            this.textBox2_apellido.Location = new System.Drawing.Point(177, 28);
+            this.textBox2_apellido.Location = new System.Drawing.Point(135, 28);
             this.textBox2_apellido.Name = "textBox2_apellido";
-            this.textBox2_apellido.Size = new System.Drawing.Size(156, 20);
+            this.textBox2_apellido.Size = new System.Drawing.Size(108, 20);
             this.textBox2_apellido.TabIndex = 1;
             // 
             // textBox4_dni
             // 
             this.textBox4_dni.Location = new System.Drawing.Point(12, 76);
             this.textBox4_dni.Name = "textBox4_dni";
-            this.textBox4_dni.Size = new System.Drawing.Size(156, 20);
-            this.textBox4_dni.TabIndex = 3;
+            this.textBox4_dni.Size = new System.Drawing.Size(108, 20);
+            this.textBox4_dni.TabIndex = 2;
             // 
             // comboBox1_estado
             // 
@@ -72,9 +72,9 @@ namespace lab3_sanchez_pablo_sn
             this.comboBox1_estado.Items.AddRange(new object[] {
             "Trabaja",
             "Estudia"});
-            this.comboBox1_estado.Location = new System.Drawing.Point(177, 119);
+            this.comboBox1_estado.Location = new System.Drawing.Point(135, 119);
             this.comboBox1_estado.Name = "comboBox1_estado";
-            this.comboBox1_estado.Size = new System.Drawing.Size(156, 21);
+            this.comboBox1_estado.Size = new System.Drawing.Size(108, 21);
             this.comboBox1_estado.TabIndex = 5;
             // 
             // label1
@@ -89,7 +89,7 @@ namespace lab3_sanchez_pablo_sn
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(177, 9);
+            this.label2.Location = new System.Drawing.Point(132, 12);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(44, 13);
             this.label2.TabIndex = 7;
@@ -98,12 +98,11 @@ namespace lab3_sanchez_pablo_sn
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(174, 60);
+            this.label3.Location = new System.Drawing.Point(132, 60);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(31, 13);
             this.label3.TabIndex = 8;
             this.label3.Text = "Sexo";
-            
             // 
             // label4
             // 
@@ -120,15 +119,15 @@ namespace lab3_sanchez_pablo_sn
             this.comboBox2_sexo.Items.AddRange(new object[] {
             "Masculino",
             "Femenino"});
-            this.comboBox2_sexo.Location = new System.Drawing.Point(177, 76);
+            this.comboBox2_sexo.Location = new System.Drawing.Point(135, 76);
             this.comboBox2_sexo.Name = "comboBox2_sexo";
-            this.comboBox2_sexo.Size = new System.Drawing.Size(156, 21);
-            this.comboBox2_sexo.TabIndex = 11;
+            this.comboBox2_sexo.Size = new System.Drawing.Size(108, 21);
+            this.comboBox2_sexo.TabIndex = 3;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(174, 103);
+            this.label6.Location = new System.Drawing.Point(132, 103);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(40, 13);
             this.label6.TabIndex = 12;
@@ -136,7 +135,7 @@ namespace lab3_sanchez_pablo_sn
             // 
             // button1_aceptar
             // 
-            this.button1_aceptar.Location = new System.Drawing.Point(258, 158);
+            this.button1_aceptar.Location = new System.Drawing.Point(168, 157);
             this.button1_aceptar.Name = "button1_aceptar";
             this.button1_aceptar.Size = new System.Drawing.Size(75, 23);
             this.button1_aceptar.TabIndex = 13;
@@ -146,7 +145,7 @@ namespace lab3_sanchez_pablo_sn
             // 
             // button2_cancelar
             // 
-            this.button2_cancelar.Location = new System.Drawing.Point(12, 158);
+            this.button2_cancelar.Location = new System.Drawing.Point(12, 157);
             this.button2_cancelar.Name = "button2_cancelar";
             this.button2_cancelar.Size = new System.Drawing.Size(75, 23);
             this.button2_cancelar.TabIndex = 14;
@@ -158,11 +157,12 @@ namespace lab3_sanchez_pablo_sn
             // 
             this.dateTimePicker1_nacimiento.AllowDrop = true;
             this.dateTimePicker1_nacimiento.CustomFormat = "dd/mm/yyyy";
-            this.dateTimePicker1_nacimiento.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dateTimePicker1_nacimiento.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dateTimePicker1_nacimiento.Location = new System.Drawing.Point(12, 120);
             this.dateTimePicker1_nacimiento.Name = "dateTimePicker1_nacimiento";
-            this.dateTimePicker1_nacimiento.Size = new System.Drawing.Size(156, 20);
-            this.dateTimePicker1_nacimiento.TabIndex = 16;
+            this.dateTimePicker1_nacimiento.Size = new System.Drawing.Size(108, 20);
+            this.dateTimePicker1_nacimiento.TabIndex = 4;
+            this.dateTimePicker1_nacimiento.Value = new System.DateTime(1900, 1, 1, 12, 1, 0, 0);
             // 
             // label7
             // 
@@ -177,7 +177,7 @@ namespace lab3_sanchez_pablo_sn
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(346, 192);
+            this.ClientSize = new System.Drawing.Size(256, 192);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.dateTimePicker1_nacimiento);
             this.Controls.Add(this.button2_cancelar);
@@ -194,6 +194,7 @@ namespace lab3_sanchez_pablo_sn
             this.Controls.Add(this.textBox1_nombre);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "VentanaPersonaALTA";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "VentanaPersonaALTA";
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -15,29 +15,28 @@ namespace lab3_sanchez_pablo_sn
         public Form1()
         {
             InitializeComponent();
-        }
-
-        private void barrioToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            VentanaBarrios ventanaBarrios = new VentanaBarrios();
-            ventanaBarrios.Show();
-        }
-
+        }        
         private void personaToolStripMenuItem_Click(object sender, EventArgs e)
         {
             VentanaPersona ventanaPersona = new VentanaPersona();
-            ventanaPersona.Show();
-        }
-
-        private void sALIRToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
+            AddOwnedForm(ventanaPersona);
+            ventanaPersona.ShowDialog();
+        }      
         private void servicioToolStripMenuItem_Click(object sender, EventArgs e)
         {
             VentanaServicio ventanaServicio = new VentanaServicio();
-            ventanaServicio.Show();
+            AddOwnedForm(ventanaServicio);
+            ventanaServicio.ShowDialog();
+        }
+        private void animalToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            VentanaAnimal vt = new VentanaAnimal();
+            AddOwnedForm(vt);
+            vt.ShowDialog();
+        }
+        private void sALIRToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

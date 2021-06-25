@@ -137,6 +137,7 @@ namespace lab3_sanchez_pablo_sn
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "VentanaServicio";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Servicios";
             this.ResumeLayout(false);
             this.PerformLayout();

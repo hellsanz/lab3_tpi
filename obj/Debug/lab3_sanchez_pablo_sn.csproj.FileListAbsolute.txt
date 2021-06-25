@@ -8,9 +8,9 @@ C:\Users\WHZ\Desktop\Lab3\obj\Debug\lab3_sanchez_pablo_sn.csproj.GenerateResourc
 C:\Users\WHZ\Desktop\Lab3\obj\Debug\lab3_sanchez_pablo_sn.csproj.CoreCompileInputs.cache
 C:\Users\WHZ\Desktop\Lab3\obj\Debug\lab3_sanchez_pablo_sn.exe
 C:\Users\WHZ\Desktop\Lab3\obj\Debug\lab3_sanchez_pablo_sn.pdb
-C:\Users\WHZ\Desktop\Lab3\obj\Debug\lab3_sanchez_pablo_sn.VentanaBarrios.resources
-C:\Users\WHZ\Desktop\Lab3\obj\Debug\lab3_sanchez_pablo_sn.VentanaBarriosALTA.resources
 C:\Users\WHZ\Desktop\Lab3\obj\Debug\lab3_sanchez_pablo_sn.VentanaPersona.resources
 C:\Users\WHZ\Desktop\Lab3\obj\Debug\lab3_sanchez_pablo_sn.VentanaPersonaALTA.resources
 C:\Users\WHZ\Desktop\Lab3\obj\Debug\lab3_sanchez_pablo_sn.VentanaServicio.resources
 C:\Users\WHZ\Desktop\Lab3\obj\Debug\lab3_sanchez_pablo_sn.VentanaServicioALTA.resources
+C:\Users\WHZ\Desktop\Lab3\obj\Debug\lab3_sanchez_pablo_sn.VentanaAnimal.resources
+C:\Users\WHZ\Desktop\Lab3\obj\Debug\lab3_sanchez_pablo_sn.VentanaAnimalAlta.resources

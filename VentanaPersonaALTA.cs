@@ -24,7 +24,36 @@ namespace lab3_sanchez_pablo_sn
 
         private void button1_aceptar_Click(object sender, EventArgs e)
         {
-            cargaDatos();
+            Boolean control = true;
+            if (textBox1_nombre.Text == "")
+            {
+                MessageBox.Show("¡Error! debe cargar el nombre");
+                control = false;
+            }
+            if (textBox2_apellido.Text == "")
+            {
+                MessageBox.Show("¡Error! debe cargar el apellido");
+                control = false;
+            }
+            if (dateTimePicker1_nacimiento.Text == "")
+            {
+                MessageBox.Show("¡Error! debe cargar su fecha de nacimiento");
+                control = false;
+            }
+            if (comboBox1_estado.Text == "")
+            {
+                MessageBox.Show("¡Error! debe seleccionar un estado");
+                control = false;
+            }
+            if (comboBox2_sexo.Text == "")
+            {
+                MessageBox.Show("¡Error! debe seleccionar un sexo");
+                control = false;
+            }
+            if (control == true)
+            {
+                cargaDatos();
+            }            
         }
 
         public void cargaDatos()
@@ -38,10 +67,9 @@ namespace lab3_sanchez_pablo_sn
 
             string dni2 = textBox4_dni.Text;
             int dni = Convert.ToInt32(dni2);
-
-
-            Persona persona = new Persona(nombre,apellido,sexo,edad, Fnacimiento, dni);
-            SqlAltaPersona(nombre, apellido, sexo, edad, Fnacimiento, dni);
+            
+            CrudPersona(nombre, apellido, sexo, edad, Fnacimiento, dni);            
+            this.Close();
         }
         private void textBox4_dni_KeyPress(object sender, KeyPressEventArgs e)
         {
@@ -64,12 +92,12 @@ namespace lab3_sanchez_pablo_sn
 
             return 0;
         }
-        public void SqlAltaPersona(string nombre, string apellido, string sexo, int edad, DateTime Fnacimiento, int dni)
+        public void CrudPersona(string nombre, string apellido, string sexo, int edad, DateTime Fnacimiento, int dni)
         {
 
 
 
-
+            MessageBox.Show("Nueva Persona Cargada a la Base de Datos");
             //Hacer el query
         }
 
