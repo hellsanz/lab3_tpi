@@ -125,7 +125,7 @@ namespace lab3_sanchez_pablo_sn
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(328, 280);
+            this.ClientSize = new System.Drawing.Size(327, 280);
             this.Controls.Add(this.button1_ver);
             this.Controls.Add(this.button1_buscar);
             this.Controls.Add(this.listView1);
@@ -138,7 +138,7 @@ namespace lab3_sanchez_pablo_sn
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "VentanaPersona";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "VentanaPersona";
+            this.Text = "Ventana Persona";
             this.ResumeLayout(false);
             this.PerformLayout();
 

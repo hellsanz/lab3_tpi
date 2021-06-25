@@ -43,6 +43,7 @@ namespace lab3_sanchez_pablo_sn
             this.button2_cancelar = new System.Windows.Forms.Button();
             this.dateTimePicker1_nacimiento = new System.Windows.Forms.DateTimePicker();
             this.label7 = new System.Windows.Forms.Label();
+            this.textBox1_ConsultaDNI = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // textBox1_nombre
@@ -173,11 +174,21 @@ namespace lab3_sanchez_pablo_sn
             this.label7.TabIndex = 17;
             this.label7.Text = "Fecha de Nacimiento";
             // 
+            // textBox1_ConsultaDNI
+            // 
+            this.textBox1_ConsultaDNI.Location = new System.Drawing.Point(277, 119);
+            this.textBox1_ConsultaDNI.Name = "textBox1_ConsultaDNI";
+            this.textBox1_ConsultaDNI.Size = new System.Drawing.Size(100, 20);
+            this.textBox1_ConsultaDNI.TabIndex = 9999;
+            this.textBox1_ConsultaDNI.TabStop = false;
+            this.textBox1_ConsultaDNI.Visible = false;
+            // 
             // VentanaPersonaALTA
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(256, 192);
+            this.ClientSize = new System.Drawing.Size(253, 192);
+            this.Controls.Add(this.textBox1_ConsultaDNI);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.dateTimePicker1_nacimiento);
             this.Controls.Add(this.button2_cancelar);
@@ -202,20 +213,20 @@ namespace lab3_sanchez_pablo_sn
         }
 
         #endregion
-
-        private System.Windows.Forms.TextBox textBox1_nombre;
-        private System.Windows.Forms.TextBox textBox2_apellido;
-        private System.Windows.Forms.TextBox textBox4_dni;
-        private System.Windows.Forms.ComboBox comboBox1_estado;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.ComboBox comboBox2_sexo;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Button button1_aceptar;
         private System.Windows.Forms.Button button2_cancelar;
         private System.Windows.Forms.DateTimePicker dateTimePicker1_nacimiento;
         private System.Windows.Forms.Label label7;
+        public System.Windows.Forms.TextBox textBox1_nombre;
+        public System.Windows.Forms.TextBox textBox2_apellido;
+        public System.Windows.Forms.TextBox textBox4_dni;
+        public System.Windows.Forms.ComboBox comboBox1_estado;
+        public System.Windows.Forms.ComboBox comboBox2_sexo;
+        public System.Windows.Forms.TextBox textBox1_ConsultaDNI;
     }
 }
