@@ -176,6 +176,7 @@ namespace lab3_sanchez_pablo_sn
             // 
             // textBox1_ConsultaDNI
             // 
+            this.textBox1_ConsultaDNI.Enabled = false;
             this.textBox1_ConsultaDNI.Location = new System.Drawing.Point(277, 119);
             this.textBox1_ConsultaDNI.Name = "textBox1_ConsultaDNI";
             this.textBox1_ConsultaDNI.Size = new System.Drawing.Size(100, 20);
@@ -187,7 +188,7 @@ namespace lab3_sanchez_pablo_sn
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(253, 192);
+            this.ClientSize = new System.Drawing.Size(257, 192);
             this.Controls.Add(this.textBox1_ConsultaDNI);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.dateTimePicker1_nacimiento);
@@ -206,7 +207,7 @@ namespace lab3_sanchez_pablo_sn
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "VentanaPersonaALTA";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "VentanaPersonaALTA";
+            this.Text = "Cargar Persona";
             this.ResumeLayout(false);
             this.PerformLayout();
 

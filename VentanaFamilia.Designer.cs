@@ -33,9 +33,9 @@ namespace lab3_sanchez_pablo_sn
             this.button1_no = new System.Windows.Forms.Button();
             this.button2_si = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.textBox1_dni = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
+            this.textBox1_dni = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -78,23 +78,6 @@ namespace lab3_sanchez_pablo_sn
             this.groupBox1.Size = new System.Drawing.Size(156, 95);
             this.groupBox1.TabIndex = 3;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "groupBox1";
-            // 
-            // textBox1_dni
-            // 
-            this.textBox1_dni.Location = new System.Drawing.Point(29, 29);
-            this.textBox1_dni.Name = "textBox1_dni";
-            this.textBox1_dni.Size = new System.Drawing.Size(100, 20);
-            this.textBox1_dni.TabIndex = 0;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(29, 13);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(93, 13);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "DNI de su Familiar";
             // 
             // button1
             // 
@@ -105,6 +88,22 @@ namespace lab3_sanchez_pablo_sn
             this.button1.Text = "Buscar";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(29, 13);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(93, 13);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "DNI de su Familiar";
+            // 
+            // textBox1_dni
+            // 
+            this.textBox1_dni.Location = new System.Drawing.Point(29, 29);
+            this.textBox1_dni.Name = "textBox1_dni";
+            this.textBox1_dni.Size = new System.Drawing.Size(100, 20);
+            this.textBox1_dni.TabIndex = 0;
             // 
             // VentanaFamiliaConsulta
             // 
@@ -118,7 +117,7 @@ namespace lab3_sanchez_pablo_sn
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "VentanaFamiliaConsulta";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Ventana Familia";
+            this.Text = "Consulta";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);

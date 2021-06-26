@@ -15,3 +15,4 @@ C:\Users\WHZ\Desktop\Lab3\obj\Debug\lab3_sanchez_pablo_sn.VentanaServicioALTA.re
 C:\Users\WHZ\Desktop\Lab3\obj\Debug\lab3_sanchez_pablo_sn.VentanaAnimal.resources
 C:\Users\WHZ\Desktop\Lab3\obj\Debug\lab3_sanchez_pablo_sn.VentanaAnimalAlta.resources
 C:\Users\WHZ\Desktop\Lab3\obj\Debug\lab3_sanchez_pablo_sn.VentanaFamiliaConsulta.resources
+C:\Users\WHZ\Desktop\Lab3\obj\Debug\lab3_sanchez_pablo_sn.VentanaPersonaBaja.resources

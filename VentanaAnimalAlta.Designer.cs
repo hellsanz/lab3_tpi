@@ -163,7 +163,7 @@ namespace lab3_sanchez_pablo_sn
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "VentanaAnimalAlta";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Ventana Animal Alta";
+            this.Text = "Cargar Animales";
             this.ResumeLayout(false);
             this.PerformLayout();
 

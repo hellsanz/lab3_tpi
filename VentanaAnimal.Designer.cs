@@ -44,16 +44,16 @@ namespace lab3_sanchez_pablo_sn
             // 
             this.button1_ver.Location = new System.Drawing.Point(255, 33);
             this.button1_ver.Name = "button1_ver";
-            this.button1_ver.Size = new System.Drawing.Size(56, 23);
+            this.button1_ver.Size = new System.Drawing.Size(75, 23);
             this.button1_ver.TabIndex = 26;
-            this.button1_ver.Text = "ver";
+            this.button1_ver.Text = "Todos";
             this.button1_ver.UseVisualStyleBackColor = true;
             // 
             // button1_buscar
             // 
-            this.button1_buscar.Location = new System.Drawing.Point(255, 7);
+            this.button1_buscar.Location = new System.Drawing.Point(174, 7);
             this.button1_buscar.Name = "button1_buscar";
-            this.button1_buscar.Size = new System.Drawing.Size(56, 20);
+            this.button1_buscar.Size = new System.Drawing.Size(156, 20);
             this.button1_buscar.TabIndex = 25;
             this.button1_buscar.Text = "Buscar";
             this.button1_buscar.UseVisualStyleBackColor = true;
@@ -63,13 +63,13 @@ namespace lab3_sanchez_pablo_sn
             this.listView1.HideSelection = false;
             this.listView1.Location = new System.Drawing.Point(12, 62);
             this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(299, 174);
+            this.listView1.Size = new System.Drawing.Size(318, 174);
             this.listView1.TabIndex = 24;
             this.listView1.UseCompatibleStateImageBehavior = false;
             // 
             // button1_cancelar
             // 
-            this.button1_cancelar.Location = new System.Drawing.Point(236, 242);
+            this.button1_cancelar.Location = new System.Drawing.Point(255, 242);
             this.button1_cancelar.Name = "button1_cancelar";
             this.button1_cancelar.Size = new System.Drawing.Size(75, 23);
             this.button1_cancelar.TabIndex = 23;
@@ -107,25 +107,25 @@ namespace lab3_sanchez_pablo_sn
             // 
             // textBox1_nombre
             // 
-            this.textBox1_nombre.Location = new System.Drawing.Point(59, 7);
+            this.textBox1_nombre.Location = new System.Drawing.Point(46, 7);
             this.textBox1_nombre.Name = "textBox1_nombre";
-            this.textBox1_nombre.Size = new System.Drawing.Size(190, 20);
+            this.textBox1_nombre.Size = new System.Drawing.Size(122, 20);
             this.textBox1_nombre.TabIndex = 19;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(9, 10);
+            this.label1.Location = new System.Drawing.Point(14, 10);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(44, 13);
+            this.label1.Size = new System.Drawing.Size(26, 13);
             this.label1.TabIndex = 18;
-            this.label1.Text = "Nombre";
+            this.label1.Text = "DNI";
             // 
             // VentanaAnimal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(327, 274);
+            this.ClientSize = new System.Drawing.Size(344, 274);
             this.Controls.Add(this.button1_ver);
             this.Controls.Add(this.button1_buscar);
             this.Controls.Add(this.listView1);
@@ -138,7 +138,7 @@ namespace lab3_sanchez_pablo_sn
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "VentanaAnimal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "VentanaAnimal";
+            this.Text = "Animales";
             this.ResumeLayout(false);
             this.PerformLayout();
 

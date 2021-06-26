@@ -26,27 +26,27 @@ namespace lab3_sanchez_pablo_sn
         {
             textBox1_ConsultaDNI.Text = "";
             Boolean control = true;
-            if (textBox1_nombre.Text == "")
+            if (string.IsNullOrEmpty(textBox1_nombre.Text)) 
             {
                 MessageBox.Show("¡Error! debe cargar el nombre");
                 control = false;
             }
-            if (textBox2_apellido.Text == "")
+            if (string.IsNullOrEmpty(textBox2_apellido.Text))
             {
                 MessageBox.Show("¡Error! debe cargar el apellido");
                 control = false;
             }
-            if (dateTimePicker1_nacimiento.Text == "")
+            if (string.IsNullOrEmpty(dateTimePicker1_nacimiento.Text))
             {
                 MessageBox.Show("¡Error! debe cargar su fecha de nacimiento");
                 control = false;
             }
-            if (comboBox1_estado.Text == "")
+            if (string.IsNullOrEmpty(comboBox1_estado.Text))
             {
                 MessageBox.Show("¡Error! debe seleccionar un estado");
                 control = false;
             }
-            if (comboBox2_sexo.Text == "")
+            if (string.IsNullOrEmpty(comboBox2_sexo.Text))
             {
                 MessageBox.Show("¡Error! debe seleccionar un sexo");
                 control = false;
@@ -97,7 +97,7 @@ namespace lab3_sanchez_pablo_sn
         public void CrudPersonaALTA(string nombre, string apellido, string sexo, DateTime Fnacimiento, int dni, int nroFamilia)
         {
             //Los mensajes estos son para testear
-            //*********************
+            //********************************** Son las variables del Alta en la BD
             MessageBox.Show("Nombre:\n"+nombre);
             MessageBox.Show("Apellido:\n" + apellido);
             MessageBox.Show("Sexo:\n" + sexo);
