@@ -16,3 +16,4 @@ C:\Users\WHZ\Desktop\Lab3\obj\Debug\lab3_sanchez_pablo_sn.VentanaAnimal.resource
 C:\Users\WHZ\Desktop\Lab3\obj\Debug\lab3_sanchez_pablo_sn.VentanaAnimalAlta.resources
 C:\Users\WHZ\Desktop\Lab3\obj\Debug\lab3_sanchez_pablo_sn.VentanaFamiliaConsulta.resources
 C:\Users\WHZ\Desktop\Lab3\obj\Debug\lab3_sanchez_pablo_sn.VentanaPersonaBaja.resources
+C:\Users\WHZ\Desktop\Lab3\obj\Debug\lab3_sanchez_pablo_sn.VentanaPersonaMod.resources

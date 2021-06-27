@@ -47,6 +47,9 @@ namespace lab3_sanchez_pablo_sn
             this.txtApellido = new System.Windows.Forms.TextBox();
             this.txtFamilia = new System.Windows.Forms.TextBox();
             this.txtID = new System.Windows.Forms.TextBox();
+            this.txt_estado = new System.Windows.Forms.TextBox();
+            this.txt_sexo = new System.Windows.Forms.TextBox();
+            this.txt_fechaNac = new System.Windows.Forms.DateTimePicker();
             this.SuspendLayout();
             // 
             // button1_ver
@@ -108,7 +111,7 @@ namespace lab3_sanchez_pablo_sn
             // columFamilia
             // 
             this.columFamilia.Text = "Familia";
-            this.columFamilia.Width = 48;
+            this.columFamilia.Width = 53;
             // 
             // button1_cancelar
             // 
@@ -128,6 +131,7 @@ namespace lab3_sanchez_pablo_sn
             this.button1_modificacion.TabIndex = 13;
             this.button1_modificacion.Text = "Modificacion";
             this.button1_modificacion.UseVisualStyleBackColor = true;
+            this.button1_modificacion.Click += new System.EventHandler(this.button1_modificacion_Click);
             // 
             // button1_baja
             // 
@@ -209,11 +213,44 @@ namespace lab3_sanchez_pablo_sn
             this.txtID.TabStop = false;
             this.txtID.Visible = false;
             // 
+            // txt_estado
+            // 
+            this.txt_estado.Enabled = false;
+            this.txt_estado.Location = new System.Drawing.Point(379, 205);
+            this.txt_estado.Name = "txt_estado";
+            this.txt_estado.Size = new System.Drawing.Size(100, 20);
+            this.txt_estado.TabIndex = 22;
+            this.txt_estado.TabStop = false;
+            this.txt_estado.Visible = false;
+            // 
+            // txt_sexo
+            // 
+            this.txt_sexo.Enabled = false;
+            this.txt_sexo.Location = new System.Drawing.Point(379, 232);
+            this.txt_sexo.Name = "txt_sexo";
+            this.txt_sexo.Size = new System.Drawing.Size(100, 20);
+            this.txt_sexo.TabIndex = 23;
+            this.txt_sexo.TabStop = false;
+            this.txt_sexo.Visible = false;
+            // 
+            // txt_fechaNac
+            // 
+            this.txt_fechaNac.Enabled = false;
+            this.txt_fechaNac.Location = new System.Drawing.Point(506, 97);
+            this.txt_fechaNac.Name = "txt_fechaNac";
+            this.txt_fechaNac.Size = new System.Drawing.Size(63, 20);
+            this.txt_fechaNac.TabIndex = 24;
+            this.txt_fechaNac.TabStop = false;
+            this.txt_fechaNac.Visible = false;
+            // 
             // VentanaPersona
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(342, 280);
+            this.ClientSize = new System.Drawing.Size(346, 280);
+            this.Controls.Add(this.txt_fechaNac);
+            this.Controls.Add(this.txt_sexo);
+            this.Controls.Add(this.txt_estado);
             this.Controls.Add(this.txtID);
             this.Controls.Add(this.txtFamilia);
             this.Controls.Add(this.txtApellido);
@@ -255,6 +292,9 @@ namespace lab3_sanchez_pablo_sn
         private System.Windows.Forms.TextBox txtApellido;
         private System.Windows.Forms.TextBox txtFamilia;
         private System.Windows.Forms.TextBox txtID;
-        internal System.Windows.Forms.TextBox textBox1_DNI;
+        public System.Windows.Forms.TextBox textBox1_DNI;
+        public System.Windows.Forms.TextBox txt_estado;
+        public System.Windows.Forms.TextBox txt_sexo;
+        public System.Windows.Forms.DateTimePicker txt_fechaNac;
     }
 }

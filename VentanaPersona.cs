@@ -102,5 +102,56 @@ namespace lab3_sanchez_pablo_sn
                 }
             }    
         }
+
+        private void button1_modificacion_Click(object sender, EventArgs e)
+        {
+            if (string.IsNullOrEmpty(textBox1_DNI.Text))
+            {
+                MessageBox.Show("Error! Debe ingresar un DNI");
+            }
+            else
+            {
+                BuscarParaMod(Convert.ToInt32(textBox1_DNI.Text));
+                this.Visible = false;
+                VentanaPersonaMod modificar = new VentanaPersonaMod();
+                AddOwnedForm(modificar);
+                modificar.textBox4_dni.Text = textBox1_DNI.Text;
+                modificar.textBox2_apellido.Text = txtApellido.Text;
+                modificar.textBox1_nombre.Text = txtNombre.Text;
+                modificar.comboBox1_estado.Text = txt_estado.Text;
+                modificar.comboBox2_sexo.Text = txt_sexo.Text;
+                modificar.dateTimePicker1_nacimiento.Value = txt_fechaNac.Value;
+                modificar.textBox4_dni.Enabled = false;
+                modificar.ShowDialog();                
+            }                           
+        }
+        public void BuscarParaMod(int dni)
+        {
+            //Traer datos para cargar estos campos
+            //por DNI de tabla Persona
+
+            //  |
+            //  |  *QUERY TABLA PERSONA * DNI 
+            //  V
+            /* datos para cargar aqui */
+
+            //*******************************
+            Boolean control = true;//existe el usuario?
+            //cargar estos campos
+            if (control == true)//si existe
+            {
+                textBox1_DNI.Text = Convert.ToString(dni);
+                txtApellido.Text = "soto";
+                txtNombre.Text = "pepito";
+                txtFamilia.Text = "151";
+                txt_estado.Text = "morido";
+                txt_sexo.Text = "anal isando";
+                txt_fechaNac.Value = Convert.ToDateTime("15/12/1998");
+            }
+            else//no existe
+            {
+                MessageBox.Show("Ese usuario no Existe!");
+            }            
+        }
     }
 }

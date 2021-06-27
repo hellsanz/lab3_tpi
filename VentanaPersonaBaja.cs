@@ -30,10 +30,6 @@ namespace lab3_sanchez_pablo_sn
             VentanaPersona vtPadre = Owner as VentanaPersona;
             int dni = Convert.ToInt32(vtPadre.textBox1_DNI.Text);
             vtPadre.Visible = true;
-
-
-
-
             this.Visible = false;
             this.Close();
             MessageBox.Show("Se ha dado la Baja de la persona Correctamente");
