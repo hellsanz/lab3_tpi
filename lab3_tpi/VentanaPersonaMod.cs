@@ -35,12 +35,9 @@ namespace lab3_sanchez_pablo_sn
                 cmd.Parameters.AddWithValue("@estado", comboBox1_estado.Text);
                 cmd.Parameters.AddWithValue("@sexo", comboBox2_sexo.Text);
                 cmd.Parameters.AddWithValue("@fechaNac", dateTimePicker1_nacimiento.Value);
-
                 cmd.ExecuteNonQuery();
-
                 MessageBox.Show("Datos Actualizados!");
                 this.Close();
-
             }
         }
         private void button2_cancelar_Click(object sender, EventArgs e)
@@ -51,11 +48,7 @@ namespace lab3_sanchez_pablo_sn
         private void button1_aceptar_Click(object sender, EventArgs e)
         {
             //realiazar la Query de Modificacion
-            ModificarDatos(Convert.ToInt32(textBox4_dni.Text));
-            
-           
-
-
+            ModificarDatos(Convert.ToInt32(textBox4_dni.Text));       
         }
     }
 }

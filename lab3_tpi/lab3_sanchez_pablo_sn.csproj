@@ -67,6 +67,18 @@
     <Compile Include="VentanaAnimalAlta.Designer.cs">
       <DependentUpon>VentanaAnimalAlta.cs</DependentUpon>
     </Compile>
+    <Compile Include="VentanaAnimalBaja.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VentanaAnimalBaja.Designer.cs">
+      <DependentUpon>VentanaAnimalBaja.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VentanaAnimalMod.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VentanaAnimalMod.Designer.cs">
+      <DependentUpon>VentanaAnimalMod.cs</DependentUpon>
+    </Compile>
     <Compile Include="VentanaFamilia.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -126,6 +138,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="VentanaAnimalAlta.resx">
       <DependentUpon>VentanaAnimalAlta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VentanaAnimalBaja.resx">
+      <DependentUpon>VentanaAnimalBaja.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VentanaAnimalMod.resx">
+      <DependentUpon>VentanaAnimalMod.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="VentanaFamilia.resx">
       <DependentUpon>VentanaFamilia.cs</DependentUpon>

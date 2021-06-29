@@ -11,9 +11,8 @@ namespace lab3_sanchez_pablo_sn
 {
     class ConexionBD
     {
-        public string conexion = @"Data Source=DESKTOP-0AEJ0VK\SQLEXPRESS;Initial Catalog=Lab3;Integrated Security=True";
+        public string conexion = @"Data Source=DESKTOP-VU4UIQ3\SQLEXPRESS;Initial Catalog=Lab3;Integrated Security=True";
         public SqlConnection conectarBD = new SqlConnection();
-
         public ConexionBD() { conectarBD.ConnectionString = conexion; }
 
         public void abrirBD()

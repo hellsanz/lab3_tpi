@@ -19,14 +19,7 @@ namespace lab3_sanchez_pablo_sn
            
         }
 
-        private void button1_cancelar_Click(object sender, EventArgs e)
-        {
-            VentanaPersona vtPadre = Owner as VentanaPersona;
-            vtPadre.Visible = true;
-            this.Close();
-        }
-
-      
+       
 
         private void VentanaPersonaBaja_Load(object sender, EventArgs e)
         {
@@ -48,8 +41,6 @@ namespace lab3_sanchez_pablo_sn
                 sqlDataAdap.Fill(dtRecord);
                 dataGridView1.DataSource = dtRecord;
                 dataGridView1.AllowUserToAddRows = false;
-
-
             }
             traerPersonaDB.cerrarBD();
         }
@@ -64,7 +55,6 @@ namespace lab3_sanchez_pablo_sn
                 cmd.Parameters.AddWithValue("@dni", dni);
                 cmd.ExecuteNonQuery();
                 MessageBox.Show("Se ha dado la Baja de la persona Correctamente");
-
             }
             eliminarDb.cerrarBD();
         }
@@ -77,7 +67,14 @@ namespace lab3_sanchez_pablo_sn
             vtPadre.Visible = true;
             vtPadre.textBox1_DNI.Clear();
             this.Close();
+        }        private void button1_cancelar_Click(object sender, EventArgs e)
+        {
+            VentanaPersona vtPadre = Owner as VentanaPersona;
+            vtPadre.Visible = true;
+            this.Close();
         }
+
+
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {

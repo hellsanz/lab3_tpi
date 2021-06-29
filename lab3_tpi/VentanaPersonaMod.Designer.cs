@@ -172,6 +172,7 @@ namespace lab3_sanchez_pablo_sn
             this.textBox1_nombre.Name = "textBox1_nombre";
             this.textBox1_nombre.Size = new System.Drawing.Size(108, 20);
             this.textBox1_nombre.TabIndex = 18;
+            this.textBox1_nombre.Text = "s";
             // 
             // VentanaPersonaMod
             // 

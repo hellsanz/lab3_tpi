@@ -18,8 +18,7 @@ namespace lab3_sanchez_pablo_sn
         
         public VentanaPersona()
         {
-            InitializeComponent();
-           
+            InitializeComponent();           
         }
 
         private void button1_alta_Click(object sender, EventArgs e)
@@ -35,35 +34,36 @@ namespace lab3_sanchez_pablo_sn
 
         private void button1_buscar_Click(object sender, EventArgs e)
         {
-            
-            int dni = Convert.ToInt32(textBox1_DNI.Text);
-            ConexionBD personas = new ConexionBD();
-            string query = "SELECT * from Personas where DNI = @dni";
-            using (SqlCommand cmd = new SqlCommand(query, personas.conectarBD))
+            if (string.IsNullOrEmpty(textBox1_DNI.Text))
             {
-                personas.abrirBD();
-                cmd.Parameters.AddWithValue("@dni", dni);
-                SqlDataAdapter sqlDataAdap = new SqlDataAdapter(cmd);
-                DataTable dtRecord = new DataTable();
-                sqlDataAdap.Fill(dtRecord);
-                dataGridView1.DataSource = dtRecord;
-                dataGridView1.AllowUserToAddRows = false;
-
-                if (dataGridView1.RowCount == 0)
-                {
-                    MessageBox.Show("Sin datos para mostrar");
-                }
+                MessageBox.Show("¡Error! debe cargar el DNI");
             }
+            else
+            {
+                int dni = Convert.ToInt32(textBox1_DNI.Text);
+                ConexionBD personas = new ConexionBD();
+                string query = "SELECT * from Personas where DNI = @dni";
+                using (SqlCommand cmd = new SqlCommand(query, personas.conectarBD))
+                {
+                    personas.abrirBD();
+                    cmd.Parameters.AddWithValue("@dni", dni);
+                    SqlDataAdapter sqlDataAdap = new SqlDataAdapter(cmd);
+                    DataTable dtRecord = new DataTable();
+                    sqlDataAdap.Fill(dtRecord);
+                    dataGridView1.DataSource = dtRecord;
+                    dataGridView1.AllowUserToAddRows = false;
+                    if (dataGridView1.RowCount == 0)
+                    {
+                        MessageBox.Show("Sin datos para mostrar");
+                    }
+                }
+            }            
         }
-
-            
-
-        
         private void button1_ver_Click(object sender, EventArgs e)
         {
             //Traer toda la tabla de Personas
             ConexionBD personas = new ConexionBD();
-            string query = "SELECT * from Personas";
+            string query = "SELECT * from Personas order by idFamilia";
             using (SqlCommand cmd = new SqlCommand(query, personas.conectarBD))
             {
                 personas.abrirBD();
@@ -72,16 +72,13 @@ namespace lab3_sanchez_pablo_sn
                 sqlDataAdap.Fill(dtRecord);
                 dataGridView1.DataSource = dtRecord;
                 dataGridView1.AllowUserToAddRows = false;
-
             }
-
             personas.cerrarBD();
         }
         private void button1_baja_Click(object sender, EventArgs e)
         {
             //hacer la baja de una Persona por DNI
-            Boolean control = false;
-            
+            Boolean control = false;            
             if (string.IsNullOrEmpty(textBox1_DNI.Text))
             {
                 MessageBox.Show("Ingrese un DNI para dar Baja!");
@@ -91,21 +88,16 @@ namespace lab3_sanchez_pablo_sn
             {
                 int dni = Convert.ToInt32(textBox1_DNI.Text);
                 
-                //Query de Control de existencia
-                
                 if (existeDni(dni) == true)
                 {
                     control = true;
-                }
-                
-                //*******************
-                
+                }                
                 if (control == true)
-                {                    //abre una ventana
+                {                    
                     this.Visible = false;
                     VentanaPersonaBaja darBaja = new VentanaPersonaBaja();
                     AddOwnedForm(darBaja);
-                    darBaja.ShowDialog();                    
+                    darBaja.ShowDialog();   //abre una ventana                 
                 }
                 else
                 {
@@ -114,7 +106,6 @@ namespace lab3_sanchez_pablo_sn
                 }
             }    
         }
-
         private Boolean existeDni(int dni) 
         {
             Boolean existe;
@@ -125,12 +116,8 @@ namespace lab3_sanchez_pablo_sn
                 DniBD.abrirBD();
                 cmd.Parameters.AddWithValue("@dni", dni);
                 int result = Convert.ToInt32(cmd.ExecuteScalar());
-
-
-
                 if (result != 0)
                 {
-
                     existe = true;
                     return existe;
                 }
@@ -139,12 +126,8 @@ namespace lab3_sanchez_pablo_sn
                     existe = false;
                     return existe;
                 }
-
-                
             }
-           
         }
-
         private void button1_modificacion_Click(object sender, EventArgs e)
         {
             if (string.IsNullOrEmpty(textBox1_DNI.Text))
@@ -169,12 +152,7 @@ namespace lab3_sanchez_pablo_sn
         }
         public void BuscarParaMod(int dni)
         {
-            //Traer datos para cargar estos campos
-            //por DNI de tabla Persona
-
-            //  |
-            //  |  *QUERY TABLA PERSONA * DNI 
-
+            //QUERY TABLA PERSONA * DNI 
             ConexionBD buscar = new ConexionBD();
             string query = "SELECT idFamilia, nombre, apellido, sexo, fechaNac, estado from Personas WHERE dni = @dni";
             using (SqlCommand cmd = new SqlCommand(query, buscar.conectarBD)) 
@@ -182,7 +160,6 @@ namespace lab3_sanchez_pablo_sn
                 buscar.abrirBD();
                 cmd.Parameters.AddWithValue("@dni", dni);
                 SqlDataReader sdr = cmd.ExecuteReader();
-
                 while (sdr.Read())
                 {
                     txtApellido.Text = sdr["apellido"].ToString();
@@ -192,40 +169,9 @@ namespace lab3_sanchez_pablo_sn
                     txt_sexo.Text = sdr["sexo"].ToString();
                     txt_fechaNac.Value = Convert.ToDateTime(sdr["fechaNac"].ToString());
                 }
-
             }
-
-            //  V
-            /* datos para cargar aqui */
-
-            //*******************************
-            //Boolean control = true;//existe el usuario?
-            //cargar estos campos
-            //if (control == true)//si existe
-            //{
-            //    textBox1_DNI.Text = Convert.ToString(dni);
-            //    txtApellido.Text = "soto";
-            //    txtNombre.Text = "pepito";
-            //    txtFamilia.Text = "151";
-            //    txt_estado.Text = "morido";
-            //    txt_sexo.Text = "anal isando";
-            //    txt_fechaNac.Value = Convert.ToDateTime("15/12/1998");
-                
-            //}
-            //else//no existe
-            //{
-            //    MessageBox.Show("Ese usuario no Existe!");
-            //}            
         }
 
-        private void listView1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void VentanaPersona_Load(object sender, EventArgs e)
-        {
-            
-        }
+        
     }
 }

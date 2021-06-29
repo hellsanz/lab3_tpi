@@ -25,7 +25,7 @@ namespace lab3_sanchez_pablo_sn
 
         private void button1_aceptar_Click(object sender, EventArgs e)
         {
-            textBox1_ConsultaDNI.Text = "";
+            
             Boolean control = true;
             if (string.IsNullOrEmpty(textBox1_nombre.Text)) 
             {
@@ -52,6 +52,12 @@ namespace lab3_sanchez_pablo_sn
                 MessageBox.Show("¡Error! debe seleccionar un sexo");
                 control = false;
             }
+            int existe = controlDeExistencia(Convert.ToInt32(textBox4_dni.Text));
+            if (existe == 0)
+            {
+                MessageBox.Show("¡Error! Ese usuario ya Existe");
+                control = false;
+            }
             if (control == true)
             {
                 this.Visible = false;
@@ -60,15 +66,11 @@ namespace lab3_sanchez_pablo_sn
                 int nroFamilia;
                 if (textBox1_ConsultaDNI.Text == "")
                 {//Asigna Nro familia NUEVO       
-                    nroFamilia = nroFamiliaNuevo();
-
-                   
+                    nroFamilia = nroFamiliaNuevo();                   
                 }
                 else
                 {//Busca en BD Persona que tenga este DNI y traer Nro campo Familia                   
-                    nroFamilia = nroFamiliaPorDNI(Convert.ToInt32(textBox1_ConsultaDNI.Text));
-
-                    
+                    nroFamilia = nroFamiliaPorDNI(Convert.ToInt32(textBox1_ConsultaDNI.Text));                   
                 }
                 cargaDatos(nroFamilia);
             }            
@@ -94,15 +96,12 @@ namespace lab3_sanchez_pablo_sn
             }
             else
             {
-
-                //Los mensajes estos son para testear
-                //********************************** Son las variables del Alta en la BD
-                MessageBox.Show("Nombre:\n" + nombre);
-                MessageBox.Show("Apellido:\n" + apellido);
-                MessageBox.Show("Sexo:\n" + sexo);
-                MessageBox.Show("Dni:\n" + Convert.ToString(dni));
-                MessageBox.Show("Nro Familia:\n" + Convert.ToString(nroFamilia));
-
+                //Son las variables del Alta en la BD
+                MessageBox.Show("Nombre: " + nombre +
+                "Apellido: " + apellido+
+                "Sexo: " + sexo+
+                "Dni: " + Convert.ToString(dni)+
+                "Nro Familia: " + Convert.ToString(nroFamilia));
                 //ACA SE HACE EL INSERT GENERAL A LA BD
                 ConexionBD insPersonaBD = new ConexionBD();
                 string query = "INSERT INTO PERSONAS (idFamilia, dni, nombre, apellido, fechaNac, estado, sexo) VALUES (@idFamilia, @dni, @nombre, @apellido, @fechaNac, @estado, @sexo)";
@@ -116,9 +115,7 @@ namespace lab3_sanchez_pablo_sn
                     cmd.Parameters.AddWithValue("@fechaNac", Fnacimiento);
                     cmd.Parameters.AddWithValue("@estado", comboBox1_estado.SelectedItem);
                     cmd.Parameters.AddWithValue("@sexo", sexo);
-
                     int result = cmd.ExecuteNonQuery();
-
                     if (result < 0)
                     {
                         MessageBox.Show("Error en insert!");
@@ -128,12 +125,8 @@ namespace lab3_sanchez_pablo_sn
                         MessageBox.Show("Nueva Persona Cargada a la Base de Datos");
                         this.Close();
                     }
-
                 }
-
-            }
-
-           
+            }           
         }
         public void familia()
         {
@@ -143,8 +136,7 @@ namespace lab3_sanchez_pablo_sn
         }
         public int nroFamiliaNuevo()
         {
-            int nuevoNro; 
-           
+            int nuevoNro;            
             //QUERY CONSULTA ULTIMO NUMERO FAMILIA
             ConexionBD queryBD = new ConexionBD();
             string query = "SELECT ISNULL(MAX(idFamilia), 0) AS nuevoNro from Personas";
@@ -153,13 +145,8 @@ namespace lab3_sanchez_pablo_sn
                 queryBD.abrirBD();
                 nuevoNro = Convert.ToInt32(cmd.ExecuteScalar()) + 1;
                 queryBD.cerrarBD();
-            }
-            //FIN DE QUERY
-
+            }            
             return nuevoNro;
-
-
-
         }
         public int nroFamiliaPorDNI(int dni)
         {
@@ -173,9 +160,6 @@ namespace lab3_sanchez_pablo_sn
                 selNroFamBD.abrirBD();
                 cmd.Parameters.AddWithValue("@dni", dni);
                 NroFamilia = Convert.ToInt32( cmd.ExecuteScalar());
-
-                
-
                 if (NroFamilia != 0)
                 {
                     MessageBox.Show("Correcto!");
@@ -184,16 +168,29 @@ namespace lab3_sanchez_pablo_sn
                 else { MessageBox.Show("DNI No Existe!");
                     this.Close();
                 } 
-
-               
-
-               
-
                 selNroFamBD.cerrarBD();
             }
-
-
             return NroFamilia;
+        }
+        public int controlDeExistencia(int dni)
+        {
+            ConexionBD buscar = new ConexionBD();
+            string query = "SELECT dni from Personas WHERE dni = @dni";
+            using (SqlCommand cmd = new SqlCommand(query, buscar.conectarBD))
+            {
+                buscar.abrirBD();
+                cmd.Parameters.AddWithValue("@dni",dni);
+                int control = Convert.ToInt32(cmd.ExecuteScalar());
+                if (control == 0)
+                {
+                    return 1;
+                }
+                else
+                {
+                    return 0;
+                }                
+            }
+            buscar.cerrarBD();            
         }
 
         private void comboBox1_estado_SelectedIndexChanged(object sender, EventArgs e)

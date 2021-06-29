@@ -101,7 +101,7 @@ namespace lab3_sanchez_pablo_sn
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(397, 173);
+            this.ClientSize = new System.Drawing.Size(398, 171);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.textBox1_DNI);
             this.Controls.Add(this.button1_aceptar);
