@@ -1,7 +1,7 @@
 ﻿
 namespace lab3_sanchez_pablo_sn
 {
-    partial class VentanaAnimalBaja
+    partial class VentanaServiciosBaja
     {
         /// <summary>
         /// Required designer variable.
@@ -41,67 +41,65 @@ namespace lab3_sanchez_pablo_sn
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(10, 23);
+            this.dataGridView1.Location = new System.Drawing.Point(12, 37);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1.Size = new System.Drawing.Size(373, 80);
-            this.dataGridView1.TabIndex = 28;
-            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            this.dataGridView1.TabIndex = 34;
             // 
             // textBox1_DNI
             // 
             this.textBox1_DNI.Enabled = false;
-            this.textBox1_DNI.Location = new System.Drawing.Point(417, 53);
+            this.textBox1_DNI.Location = new System.Drawing.Point(419, 67);
             this.textBox1_DNI.Name = "textBox1_DNI";
             this.textBox1_DNI.ShortcutsEnabled = false;
             this.textBox1_DNI.Size = new System.Drawing.Size(100, 20);
-            this.textBox1_DNI.TabIndex = 27;
+            this.textBox1_DNI.TabIndex = 33;
             this.textBox1_DNI.TabStop = false;
             this.textBox1_DNI.Visible = false;
             // 
             // button1_aceptar
             // 
-            this.button1_aceptar.Location = new System.Drawing.Point(222, 130);
+            this.button1_aceptar.Location = new System.Drawing.Point(224, 144);
             this.button1_aceptar.Name = "button1_aceptar";
             this.button1_aceptar.Size = new System.Drawing.Size(75, 23);
-            this.button1_aceptar.TabIndex = 26;
+            this.button1_aceptar.TabIndex = 32;
             this.button1_aceptar.Text = "SI";
             this.button1_aceptar.UseVisualStyleBackColor = true;
             this.button1_aceptar.Click += new System.EventHandler(this.button1_aceptar_Click);
             // 
             // button1_cancelar
             // 
-            this.button1_cancelar.Location = new System.Drawing.Point(90, 130);
+            this.button1_cancelar.Location = new System.Drawing.Point(92, 144);
             this.button1_cancelar.Name = "button1_cancelar";
             this.button1_cancelar.Size = new System.Drawing.Size(75, 23);
-            this.button1_cancelar.TabIndex = 25;
+            this.button1_cancelar.TabIndex = 31;
             this.button1_cancelar.Text = "NO";
             this.button1_cancelar.UseVisualStyleBackColor = true;
-            this.button1_cancelar.Click += new System.EventHandler(this.button1_cancelar_Click);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(111, 105);
+            this.label2.Location = new System.Drawing.Point(113, 119);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(154, 13);
-            this.label2.TabIndex = 24;
+            this.label2.TabIndex = 30;
             this.label2.Text = "Desea Continuar Con la BAJA?";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(91, 7);
+            this.label1.Location = new System.Drawing.Point(93, 21);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(188, 13);
-            this.label1.TabIndex = 23;
-            this.label1.Text = "Ud. esta por dar de Baja a este Animal";
+            this.label1.Size = new System.Drawing.Size(195, 13);
+            this.label1.TabIndex = 29;
+            this.label1.Text = "Ud. esta por dar de Baja a este Servicio";
             // 
-            // VentanaAnimalBaja
+            // VentanaServiciosBaja
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(393, 172);
+            this.ClientSize = new System.Drawing.Size(397, 186);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.textBox1_DNI);
             this.Controls.Add(this.button1_aceptar);
@@ -109,9 +107,8 @@ namespace lab3_sanchez_pablo_sn
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
-            this.Name = "VentanaAnimalBaja";
-            this.Text = "Animal Baja";
-            this.Load += new System.EventHandler(this.VentanaAnimalBaja_Load);
+            this.Name = "VentanaServiciosBaja";
+            this.Text = "Advertencia";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -11,9 +11,9 @@ using System.Data.SqlClient;
 
 namespace lab3_sanchez_pablo_sn
 {
-    public partial class VentanaAnimalBaja : Form
+    public partial class VentanaServiciosBaja : Form
     {
-        public VentanaAnimalBaja()
+        public VentanaServiciosBaja()
         {
             InitializeComponent();
         }
@@ -30,38 +30,38 @@ namespace lab3_sanchez_pablo_sn
             }
             traerPersonaDB.cerrarBD();
             return idFamilia;
-        }       
-        private void eliminarAnimal(int idF)
+        }
+        private void eliminarServicio(int idF)
         {
             ConexionBD eliminarDb = new ConexionBD();
-            string query = "DELETE FROM Animales WHERE idFamilia = @idF";
+            string query = "DELETE FROM Servicios WHERE idFamilia = @idF";
             using (SqlCommand cmd = new SqlCommand(query, eliminarDb.conectarBD))
             {
                 eliminarDb.abrirBD();
                 cmd.Parameters.AddWithValue("@idF", idF);
                 cmd.ExecuteNonQuery();
-                MessageBox.Show("Se ha dado la Baja al Animal Correctamente");
+                MessageBox.Show("Se ha dado la Baja al Servicio Correctamente");
             }
             eliminarDb.cerrarBD();
         }
         private void button1_aceptar_Click(object sender, EventArgs e)
         {
-            VentanaAnimal vtPadre = Owner as VentanaAnimal;
-            int dni = Convert.ToInt32(vtPadre.textBox1_DNI.Text);            ;
-            eliminarAnimal(traerPersona(dni));
+            VentanaServicio vtPadre = Owner as VentanaServicio;
+            int dni = Convert.ToInt32(vtPadre.textBox1_DNI.Text); ;
+            eliminarServicio(traerPersona(dni));
             vtPadre.Visible = true;
             vtPadre.textBox1_DNI.Clear();
             this.Close();
         }
         private void button1_cancelar_Click(object sender, EventArgs e)
         {
-            VentanaAnimal vtPadre = Owner as VentanaAnimal;
+            VentanaServicio vtPadre = Owner as VentanaServicio;
             vtPadre.Visible = true;
             this.Close();
         }
         private void VentanaAnimalBaja_Load(object sender, EventArgs e)
         {
-            VentanaAnimal vtPadre = Owner as VentanaAnimal;
+            VentanaServicio vtPadre = Owner as VentanaServicio;
             int dni = Convert.ToInt32(vtPadre.textBox1_DNI.Text);
             traerPersona(dni);
         }

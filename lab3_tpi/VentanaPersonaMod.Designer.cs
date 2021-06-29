@@ -172,13 +172,12 @@ namespace lab3_sanchez_pablo_sn
             this.textBox1_nombre.Name = "textBox1_nombre";
             this.textBox1_nombre.Size = new System.Drawing.Size(108, 20);
             this.textBox1_nombre.TabIndex = 18;
-            this.textBox1_nombre.Text = "s";
             // 
             // VentanaPersonaMod
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(254, 191);
+            this.ClientSize = new System.Drawing.Size(255, 191);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.dateTimePicker1_nacimiento);
             this.Controls.Add(this.button2_cancelar);
@@ -196,7 +195,7 @@ namespace lab3_sanchez_pablo_sn
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "VentanaPersonaMod";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "VentanaPersonaMod";
+            this.Text = "Modificar Persona";
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -189,7 +189,7 @@ namespace lab3_sanchez_pablo_sn
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(341, 274);
+            this.ClientSize = new System.Drawing.Size(345, 271);
             this.Controls.Add(this.txt_origen);
             this.Controls.Add(this.txtIDfamilia);
             this.Controls.Add(this.txtTipo);

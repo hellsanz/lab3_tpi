@@ -121,6 +121,18 @@
     <Compile Include="VentanaServicioALTA.Designer.cs">
       <DependentUpon>VentanaServicioALTA.cs</DependentUpon>
     </Compile>
+    <Compile Include="VentanaServicioMod.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VentanaServicioMod.Designer.cs">
+      <DependentUpon>VentanaServicioMod.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VentanaServiciosBaja.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VentanaServiciosBaja.Designer.cs">
+      <DependentUpon>VentanaServiciosBaja.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -165,6 +177,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="VentanaServicioALTA.resx">
       <DependentUpon>VentanaServicioALTA.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VentanaServicioMod.resx">
+      <DependentUpon>VentanaServicioMod.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VentanaServiciosBaja.resx">
+      <DependentUpon>VentanaServiciosBaja.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

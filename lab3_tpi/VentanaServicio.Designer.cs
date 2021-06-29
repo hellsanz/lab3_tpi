@@ -30,14 +30,20 @@ namespace lab3_sanchez_pablo_sn
         private void InitializeComponent()
         {
             this.button1_ver = new System.Windows.Forms.Button();
-            this.button1_buscar = new System.Windows.Forms.Button();
-            this.listView1 = new System.Windows.Forms.ListView();
             this.button1_cancelar = new System.Windows.Forms.Button();
             this.button1_modificacion = new System.Windows.Forms.Button();
             this.button1_baja = new System.Windows.Forms.Button();
             this.button1_alta = new System.Windows.Forms.Button();
-            this.textBox1_nombre = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.button1_buscar = new System.Windows.Forms.Button();
+            this.textBox1_DNI = new System.Windows.Forms.TextBox();
+            this.txt_premium = new System.Windows.Forms.TextBox();
+            this.txtIDfamilia = new System.Windows.Forms.TextBox();
+            this.txtcosto = new System.Windows.Forms.TextBox();
+            this.txtempresa = new System.Windows.Forms.TextBox();
+            this.txtservicio = new System.Windows.Forms.TextBox();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // button1_ver
@@ -48,24 +54,7 @@ namespace lab3_sanchez_pablo_sn
             this.button1_ver.TabIndex = 26;
             this.button1_ver.Text = "Todos";
             this.button1_ver.UseVisualStyleBackColor = true;
-            // 
-            // button1_buscar
-            // 
-            this.button1_buscar.Location = new System.Drawing.Point(174, 10);
-            this.button1_buscar.Name = "button1_buscar";
-            this.button1_buscar.Size = new System.Drawing.Size(156, 20);
-            this.button1_buscar.TabIndex = 25;
-            this.button1_buscar.Text = "Buscar";
-            this.button1_buscar.UseVisualStyleBackColor = true;
-            // 
-            // listView1
-            // 
-            this.listView1.HideSelection = false;
-            this.listView1.Location = new System.Drawing.Point(12, 65);
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(318, 174);
-            this.listView1.TabIndex = 24;
-            this.listView1.UseCompatibleStateImageBehavior = false;
+            this.button1_ver.Click += new System.EventHandler(this.button1_ver_Click);
             // 
             // button1_cancelar
             // 
@@ -85,6 +74,7 @@ namespace lab3_sanchez_pablo_sn
             this.button1_modificacion.TabIndex = 22;
             this.button1_modificacion.Text = "Modificacion";
             this.button1_modificacion.UseVisualStyleBackColor = true;
+            this.button1_modificacion.Click += new System.EventHandler(this.button1_modificacion_Click);
             // 
             // button1_baja
             // 
@@ -94,6 +84,7 @@ namespace lab3_sanchez_pablo_sn
             this.button1_baja.TabIndex = 21;
             this.button1_baja.Text = "Baja";
             this.button1_baja.UseVisualStyleBackColor = true;
+            this.button1_baja.Click += new System.EventHandler(this.button1_baja_Click);
             // 
             // button1_alta
             // 
@@ -105,13 +96,6 @@ namespace lab3_sanchez_pablo_sn
             this.button1_alta.UseVisualStyleBackColor = true;
             this.button1_alta.Click += new System.EventHandler(this.button1_alta_Click);
             // 
-            // textBox1_nombre
-            // 
-            this.textBox1_nombre.Location = new System.Drawing.Point(41, 10);
-            this.textBox1_nombre.Name = "textBox1_nombre";
-            this.textBox1_nombre.Size = new System.Drawing.Size(127, 20);
-            this.textBox1_nombre.TabIndex = 19;
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -121,24 +105,111 @@ namespace lab3_sanchez_pablo_sn
             this.label1.TabIndex = 18;
             this.label1.Text = "DNI";
             // 
+            // dataGridView1
+            // 
+            this.dataGridView1.AllowUserToOrderColumns = true;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(12, 65);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(315, 173);
+            this.dataGridView1.TabIndex = 28;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            // 
+            // button1_buscar
+            // 
+            this.button1_buscar.Location = new System.Drawing.Point(175, 10);
+            this.button1_buscar.Name = "button1_buscar";
+            this.button1_buscar.Size = new System.Drawing.Size(156, 20);
+            this.button1_buscar.TabIndex = 29;
+            this.button1_buscar.Text = "Buscar";
+            this.button1_buscar.UseVisualStyleBackColor = true;
+            this.button1_buscar.Click += new System.EventHandler(this.button1_buscar_Click);
+            // 
+            // textBox1_DNI
+            // 
+            this.textBox1_DNI.Location = new System.Drawing.Point(47, 10);
+            this.textBox1_DNI.Name = "textBox1_DNI";
+            this.textBox1_DNI.Size = new System.Drawing.Size(122, 20);
+            this.textBox1_DNI.TabIndex = 30;
+            // 
+            // txt_premium
+            // 
+            this.txt_premium.Enabled = false;
+            this.txt_premium.Location = new System.Drawing.Point(433, 172);
+            this.txt_premium.Name = "txt_premium";
+            this.txt_premium.Size = new System.Drawing.Size(100, 20);
+            this.txt_premium.TabIndex = 37;
+            this.txt_premium.TabStop = false;
+            this.txt_premium.Visible = false;
+            // 
+            // txtIDfamilia
+            // 
+            this.txtIDfamilia.Enabled = false;
+            this.txtIDfamilia.Location = new System.Drawing.Point(433, 65);
+            this.txtIDfamilia.Name = "txtIDfamilia";
+            this.txtIDfamilia.ShortcutsEnabled = false;
+            this.txtIDfamilia.Size = new System.Drawing.Size(100, 20);
+            this.txtIDfamilia.TabIndex = 36;
+            this.txtIDfamilia.TabStop = false;
+            this.txtIDfamilia.Visible = false;
+            // 
+            // txtcosto
+            // 
+            this.txtcosto.Enabled = false;
+            this.txtcosto.Location = new System.Drawing.Point(433, 145);
+            this.txtcosto.Name = "txtcosto";
+            this.txtcosto.ShortcutsEnabled = false;
+            this.txtcosto.Size = new System.Drawing.Size(100, 20);
+            this.txtcosto.TabIndex = 35;
+            this.txtcosto.TabStop = false;
+            this.txtcosto.Visible = false;
+            // 
+            // txtempresa
+            // 
+            this.txtempresa.Enabled = false;
+            this.txtempresa.Location = new System.Drawing.Point(433, 118);
+            this.txtempresa.Name = "txtempresa";
+            this.txtempresa.ShortcutsEnabled = false;
+            this.txtempresa.Size = new System.Drawing.Size(100, 20);
+            this.txtempresa.TabIndex = 34;
+            this.txtempresa.TabStop = false;
+            this.txtempresa.Visible = false;
+            // 
+            // txtservicio
+            // 
+            this.txtservicio.Enabled = false;
+            this.txtservicio.Location = new System.Drawing.Point(433, 91);
+            this.txtservicio.Name = "txtservicio";
+            this.txtservicio.ShortcutsEnabled = false;
+            this.txtservicio.Size = new System.Drawing.Size(100, 20);
+            this.txtservicio.TabIndex = 33;
+            this.txtservicio.TabStop = false;
+            this.txtservicio.Visible = false;
+            // 
             // VentanaServicio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(343, 279);
-            this.Controls.Add(this.button1_ver);
+            this.ClientSize = new System.Drawing.Size(344, 278);
+            this.Controls.Add(this.txt_premium);
+            this.Controls.Add(this.txtIDfamilia);
+            this.Controls.Add(this.txtcosto);
+            this.Controls.Add(this.txtempresa);
+            this.Controls.Add(this.txtservicio);
+            this.Controls.Add(this.textBox1_DNI);
             this.Controls.Add(this.button1_buscar);
-            this.Controls.Add(this.listView1);
+            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.button1_ver);
             this.Controls.Add(this.button1_cancelar);
             this.Controls.Add(this.button1_modificacion);
             this.Controls.Add(this.button1_baja);
             this.Controls.Add(this.button1_alta);
-            this.Controls.Add(this.textBox1_nombre);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "VentanaServicio";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Servicios";
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -147,13 +218,18 @@ namespace lab3_sanchez_pablo_sn
         #endregion
 
         private System.Windows.Forms.Button button1_ver;
-        private System.Windows.Forms.Button button1_buscar;
-        private System.Windows.Forms.ListView listView1;
         private System.Windows.Forms.Button button1_cancelar;
         private System.Windows.Forms.Button button1_modificacion;
         private System.Windows.Forms.Button button1_baja;
         private System.Windows.Forms.Button button1_alta;
-        private System.Windows.Forms.TextBox textBox1_nombre;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Button button1_buscar;
+        public System.Windows.Forms.TextBox textBox1_DNI;
+        public System.Windows.Forms.TextBox txt_premium;
+        public System.Windows.Forms.TextBox txtIDfamilia;
+        public System.Windows.Forms.TextBox txtcosto;
+        public System.Windows.Forms.TextBox txtempresa;
+        public System.Windows.Forms.TextBox txtservicio;
     }
 }

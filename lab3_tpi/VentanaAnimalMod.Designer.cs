@@ -158,7 +158,7 @@ namespace lab3_sanchez_pablo_sn
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(235, 202);
+            this.ClientSize = new System.Drawing.Size(233, 205);
             this.Controls.Add(this.textBox1_idFamilia);
             this.Controls.Add(this.textBox1_DNI_titular);
             this.Controls.Add(this.label5);
@@ -172,8 +172,10 @@ namespace lab3_sanchez_pablo_sn
             this.Controls.Add(this.textBox1_nombreA);
             this.Controls.Add(this.button2_cancelar);
             this.Controls.Add(this.button1_aceptar);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "VentanaAnimalMod";
-            this.Text = "VentanaAnimalMod";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Modificar Animal";
             this.ResumeLayout(false);
             this.PerformLayout();
 
